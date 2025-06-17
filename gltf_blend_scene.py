@@ -173,6 +173,7 @@ def main(
 
     scene = bpy.data.scenes["Scene"]
     scene.view_settings.view_transform = "Filmic"
+    bpy.context.scene.render.engine = "CYCLES"
     bpy.context.scene.view_settings.look = "High Contrast"
     bpy.context.scene.cycles.use_denoising = True
 
