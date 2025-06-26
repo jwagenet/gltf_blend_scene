@@ -244,6 +244,7 @@ def main(
     min_corner, max_corner = find_corners(objects)
     loc = (min_corner + max_corner) / 2
     bpy.ops.transform.translate(value=(-loc.x, -loc.y, 0))
+    bpy.ops.transform.translate(value=(0, 0, -min_corner.z))
 
     # Apply rotation
     bpy.context.scene.tool_settings.transform_pivot_point = "CURSOR"
